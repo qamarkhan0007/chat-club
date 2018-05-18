@@ -1,0 +1,146 @@
+.side-bar{
+  width: 20%;
+  height: 100vh;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  border: 1px dotted #51ACC7;
+  background-color: #51ACC7;
+  overflow-y: hidden;
+}
+.side-bar:hover{
+  overflow-y: scroll;
+}
+img{
+  width: 80px;
+  height: 80px;
+}
+.top-div img{
+  width: 40px;
+  height: 40px;
+  margin-top: 15px;
+}
+h3{
+  padding: 20px;
+}
+.user_name {
+  font-size: 10px;
+  color: #afafaf;
+}
+.message {
+  width: 70%;
+  padding: 10px 10px 10px 30px !important;
+  transition: all 250ms ease-in-out !important;
+  border-radius: 10px !important;
+  margin: 2px 2px 2px 10px;
+}
+.my_message {
+  background: white !important;
+  color: #AF7AC5 !important;
+}
+.other_message {
+  background: #51ACC7 !important;
+  color: #F5EEF8 !important;
+}
+.time {
+  color: #afafaf;
+  font-size: 10px;
+}
+.message_row {
+  background-color: #fff;
+}
+.my-button{
+  margin-right: 10px;
+  position: fixed;
+  right: 0px;
+  bottom: 5px;
+  border: none;
+}
+.my-input{
+  padding: 5px;
+  height: 90px;
+  width: 100%;
+  border: none;
+  margin-left: 2px;
+  outline: none;
+  position: fixed;
+  left: 20%;
+  bottom: 0px;
+}
+.my-container{
+  float: right;
+  padding-top: 7%;
+  padding-bottom: 7%;
+  width: 80%;
+  background-color: #CAE6EE;
+  height: 100vh;
+}
+.bottom-div{
+  width: 100%;
+  margin-top: 0px;
+  position: fixed;
+  bottom: 0px;
+  left: 20%;
+}
+.top-div{
+  width: 100%;
+  margin-top: 0px;
+  position: fixed;
+  top: 0px;
+  left: 20%;
+  color: #CAE6EE;
+  background-color: #51ACC7;
+  display: inline-flex;
+}
+p{
+  font-size: 10px;
+}
+.macro{
+  width:85%;
+  border-radius:5px;
+  display:flex;
+}
+.chat-div{
+  padding-left: 30px;
+  width: 70%;
+}
+.make-inline{
+  width: 70%;
+  display: inline-flex;
+}
+.profile-tag{
+  text-decoration: none;
+  position: fixed;
+  right: 50px;
+  top: 30px;
+  color: white;
+}
+
+
+
+
+.msg-container{
+  position: fixed;
+  right: 0px;
+  bottom: 0px;
+}
+.display-container{
+  width: 100%;
+  background-color: #D0D3D4;
+}
+.custom-container{
+  position: relative;
+  width: 100%;
+}
+.video-container {
+  position: relative;
+}
+.overlay-desc {
+  background: rgba(0,0,0,0);
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}

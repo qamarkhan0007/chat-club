@@ -1,0 +1,69 @@
+<div class="container-fluid">
+  <div class="container text-center fixed-top">
+    <img src="./assets/image/send.png" alt="" class="rounded-circle bg-secondary pic-size">
+    <div class="mt-3 display-4">
+      Name
+    </div>
+    <hr>
+  </div>
+</div>
+<!-- Sidebar -->
+<div id="wrapper" class="active">
+  <div id="sidebar-wrapper">
+    <ul id="sidebar_menu" class="sidebar-nav">
+      <li class="sidebar-brand"><a id="menu-toggle"><span (click)='checkStatus()' id="main_icon" [ngClass]="{'glyphicon glyphicon-chevron-right': sideBar, 'glyphicon glyphicon-chevron-left': '!sideBar'}"></span></a></li>
+    </ul>
+    <ul class="contact-top">
+      <li class="contact-list" (click)="getUser('david@gmail.com')">David</li>
+      <li class="contact-list" (click)="getUser('anon@gmail.com')">Annonymous</li>
+      <li class="contact-list">user 3</li>
+    </ul>
+  </div>
+</div>
+<a class="btn logout fixed-right" (click)='logout()'>Logout</a>
+
+<div class="container chat-position">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="panel panel-div">
+        <div class="panel-heading">
+          <span class="glyphicon glyphicon-comment"></span> Chat
+          <div class="panel-body">
+            <ul *ngFor="let message of messages" class="chat">
+              <li *ngIf="message.from !== currentUser" class="left clearfix"><span class="chat-img pull-left">
+                <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+              </span>
+              <div class="chat-body clearfix">
+                <div class="header">
+                  <p>{{ message.name }}</p> <small class="pull-right text-muted">
+                    <span class="glyphicon glyphicon-time"></span>{{ message.date }}</small>
+                  </div>
+                  <p>{{ message.msg }}</p>
+                </div>
+              </li>
+
+              <li *ngIf="message.from === currentUser" class="right clearfix"><span class="chat-img pull-right">
+                <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+              </span>
+              <div class="chat-body clearfix">
+                <div class="header">
+                  <small class=" text-muted"><span class="glyphicon glyphicon-time"></span>{{ message.date }}</small>
+                  <p class="pull-right">{{ message.name }}</p>
+                </div>
+                <p>{{ message.msg }}</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="panel-footer">
+          <div class="input-group mb-3">
+            <input id="btn-input" type="text" [(ngModel)]="message" class="form-control input-lg" placeholder="Type your message here..." />
+            <span class="input-group-append">
+              <button class="btn btn-default btn-send" id="btn-chat" (click)="sendMessage(currentUser)">Send</button>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

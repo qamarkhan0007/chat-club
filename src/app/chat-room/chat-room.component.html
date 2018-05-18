@@ -1,0 +1,64 @@
+  <div class="display-container">
+    <div class="container-fluid custom-container">
+      <div class="container video-container">
+        <video autoplay muted loop class="container-fluid">
+          <source src="../assets/video/bg-video.mp4" type="video/mp4">
+          Your browser does not support HTML5 video.
+        </video>
+        <div class="overlay-desc">
+          <h1 class="display-1">Be a Chat Buddy</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid msg-container">
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-lg-4 bg-success">
+          <p>Hello</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+<!-- <div class="top-div form-control">
+  <h3>{{nickname}}</h3>
+  <img src="./assets/image/user.ico"/>
+  <a [routerLink]="['profile']" class="profile-tag">Profile</a>
+</div>
+  <div class="side-bar">
+  </div>
+  <div style="overflow-y:scroll" class="my-container">
+
+    <div class="macro" *ngFor="let message of messages" [@messages]="messages.length">
+
+      <div *ngIf="message.from !== nickname" class="chat-div">
+        <span class="user_name">{{ message.from }}</span><br>
+        <div class="make-inline">
+          <div class="message" [ngClass]="{'my_message': message.from === nickname, 'other_message': message.from !== nickname}">
+            <span (click)="removeItem(message.text)">{{ message.text }}</span><br>
+          </div>
+          <div class="time">{{message.created | date:'dd.MM hh:MM'}}</div><br>
+        </div>
+      </div>
+
+      <div *ngIf="message.from === nickname" class="chat-div">
+        <span class="user_name">{{ message.from }}</span><br>
+        <div class="make-inline">
+          <div class="message" [ngClass]="{'my_message': message.from === nickname, 'other_message': message.from !== nickname}">
+            <span let i = index (click)="removeItem(i)">{{ message.text }}</span><br>
+          </div>
+          <div class="time">{{message.created | date:'dd.MM hh:MM'}}</div><br>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div class="bottom-div form-control">
+  <label class="control-label col-sm-2"><input class="my-input" type="text" placeholder="Message" [(ngModel)]="message"></label>
+  <img class="my-button" (click)="sendMessage()" src="./assets/image/send.png"/>
+  <!-- <button class="my-button" ion-button clear color="primary" (click)="sendMessage()" [disabled]="message === ''">Send</button> -->
+<!-- </div> -->

@@ -1,0 +1,82 @@
+<!-- <div class="myContainer">
+  <div class="subContainer">
+    <div class="myNav">
+      <h3>Chat Room</h3>
+    </div>
+    <br>
+    <div class="body-div">
+      <div>
+        <label>Set Nickname</label><br>
+        <input class="my-text" type="text" placeholder="Nickname" [(ngModel)]="nickname">
+      </div>
+      <br><br>
+      <button class="my-button" (click)="joinChat()" [disabled]="nickname === ''">Join Chat as {{ nickname }}</button>
+    </div>
+  </div>
+</div> -->
+
+<div class="container">
+	<div class="login-container">
+            <div id="output"></div>
+            <div class="avatar"></div>
+            <div class="form-box">
+                <form action="" method="" #form="ngForm" (submit)="login(form.value)">
+                    <input name="user" type="text" placeholder="username" name="username" [(ngModel)]="username">
+                    <input type="password" placeholder="password" name="password" [(ngModel)]="password" >
+                    <button class="btn btn-info btn-block login" type="submit">Login</button>
+                </form>
+            </div>
+        </div>
+</div>
+<input type="button" name="" value="show success" (click)="showSuccess()" class="btn">
+
+<input type="file" name="" value="upload" (change)="onFileChange($event)">
+<input type="button" name="" value="Get File" (click)='getFile()'>
+
+<div class="container">
+		<ng-multiselect-dropdown
+		[placeholder]="'custom placeholder'"
+		[data]="cities"
+		[(ngModel)]="selectedItems"
+		[settings]="dropdownSettings"
+		(onSelect)="onItemSelect($event)"
+		(onSelectAll)="onSelectAll($event)"
+		>
+		</ng-multiselect-dropdown>
+</div>
+<!-- <form class="" action="index.html" method="post">
+	<div class="col-lg-4 col-sm-4">
+		<div class="form-group">
+			<label>Job Category</label>
+			<select [(ngModel)]="opts" name="opts" (change)="onChange($event.target.value)">
+				<option *ngFor="let opt of cities; trackBy: callMe" value="[{{opt.data}}]">{{opt.item_text}}</option>
+			</select>
+		</div>
+	</div>
+	<div class="col-lg-4 col-sm-4">
+		<div class="form-group">
+			<label>Job Category</label>
+			<select>
+				<option *ngFor="let opt of opts;">{{opt}}</option>
+			</select>
+		</div>
+	</div>
+Datra {{opts}} -->
+ <a href="chat-server/server/generated.png" download="generated.png"> <button>Download</button></a>
+{{today | date:'fullDate'}}
+
+<!-- <ng-container *ngFor="let i of [10, 23, 32, 41, 51]; let ind=index trackBy: trackByFn">
+	{{countMe()}}
+	<tr *ngFor="let num of ([1, 2, 3]); let rowIndex = index">
+		<td>{{ (ind * [1, 2, 3].length) + rowIndex + 1 }}: {{num*i}} {{counter}}</td>
+	</tr>
+</ng-container> -->
+<alert type="success">hello</alert>
+<div class="col-xs-12 col-12 col-sm-6 col-md-4 form-group">
+    <input class="form-control"
+           placeholder="Datepicker"
+           ngModel
+           bsDatepicker
+           [minDate]="minDate"
+          >
+  </div>
